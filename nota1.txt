@@ -1,0 +1,11 @@
+
+Conexion a base de datos, se crea un proyecto maven
+Mapeo inverso -> conociendo las tablas crear las clases
+Mapeo directo -> crear las tablas con toda las anotaciones necesarias
+
+Buscar el data source explorer herramienta
+Darle new a la primera carpeta que aparece, se elije que base de dato se va a usar (poner nombre a la conexion)
+En caso de no encontrar el driver buscarlo
+Rellenar los campos que se ponen 
+
+Crear proyecto maven para poder mapear 
