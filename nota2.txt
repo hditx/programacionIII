@@ -1,0 +1,34 @@
+transacciones modifican el estado de la base de datos
+query solo recupera objeto y no hace modificaciones en la base de datos
+
+
+modificacion de objeto
+objeto.find(Employee.class, 1) trae un objeto con el id 1
+objeto.getTransaction().begin() hace el inicio de la conexion de la bae de dato
+objeto.getTransaction().commit() hace la percistencia en la base de datos
+
+
+borrado
+objeto.find(Employee.class, 1) trae un objeto con el id 1
+objeto.getTransaction().begin() hace el inicio de la conexion de la bae de dato
+objeto.remove(employee) eliminacion
+objeto.getTransaction().commit() hace la percistencia en la base de datos
+
+
+borrado cascada
+
+@Entity
+class Employee{
+.
+.
+@OneToOne(cascade=CascadeType.REMOVE)
+private Address address;
+.
+.
+}
+
+JPQL es otra forma de comunicarce con la base de datos
+el nombre de persistence.xml sirve para poder conectarse a la base de datos
+unidad de persistencia
+entitymanagerfactory es la asociacion para poder hacer acciones con la base de datos
+remove, update, etc.
