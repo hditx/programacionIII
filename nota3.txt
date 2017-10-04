@@ -1,0 +1,19 @@
+schema generation se encarga de especificar como se va a tomar la base de datos
+Data base action seleccionamos create, esto nos va a hacer crear secuencia, tabla
+script generation nos pide donde va a guardar, y podes guardar un script
+dentro del paquete generamos JPA Entity, tiene un wizard para hacer paso a paso lo que queremos mapear
+se empiza a poner los atributos que va a tener con sus respectivos tipos de datos
+Si se quiere generar una clase con atributo de otra clase, se pone el paquete.nombreClase y el nombre de la variable
+por compatibilidad existe la representacion de la clave compuesta, pero en un modelo de objeto no es necesario tener 
+clave compuesta
+Se puede definir listas en el wizard 
+
+JPA necesita @Entity antes del public class, @Id alguna variable y un contrusctor vacio. Para poder tener persistencia
+Hay que agregar la estrategia de generar los datos, en psql y oracle usa secuencias. 
+hay que agregar para especificar que tiene una secuencia, @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="entidad_sq")
+@ManyToMany se define la clase dominante por eleccion logica, ya que se puede elegir cualquiera de las dos
+en la clase dominada se tendria que poner @ManyToMany(mappedBy="permisos")
+en la clase dominante va @ManyToMany \n @table
+orm.xml es un archivo donde tiene la configuracion que se configuran ciertos atributos, que se va encargar de definir
+de como se va a hacer el mapeo 
+para crear orm.xml JPA ORM Mapping File
